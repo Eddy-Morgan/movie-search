@@ -1,0 +1,43 @@
+body {
+    background-color: #000000;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white !important;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-nav {
+    background-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    font-size: 12px;
+}
+
+hr {
+    color: white;
+}
+
+.terms {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.search-input {
+    width: 39vw;
+    height: 6vh;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+}
+
+.search-submit {
+    width: 7vh;
+    height: 6vh;
+    background-color: white;
+    border: none;
+    margin-left: -2px;
+    color: #000000
+}

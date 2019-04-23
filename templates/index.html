@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Filme</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../static/images/movie.ico"
+          type="image/x-icon">
+    <link rel="icon" href="../static/images/movie.ico"
+          type="image/x-icon">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm flex-column justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<br>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <img src="../static/images/movie.ico">
+    </div>
+    <br>
+    <h2 class="text-center">FILME</h2>
+    <br>
+    <form action="/search" method="get">
+        <div class="input-group form-inline d-flex justify-content-center">
+            <input class="search-input" type="text" name="query" placeholder="Search Movie">
+            <input class="search-submit" type="submit" value="+">
+        </div>
+    </form>
+    <hr>
+    {% if results == {} %}
+            <p>By pressing "Search” you confirm your consent to our <a class="terms" href="#">Terms of Use</a>.</p>
+        <p>
+        Welcome to FILME - a popular and free movies and series search engine and tool. Just type in your search query,
+        The search will take only a short while.
+        As soon as we find any results matching your search query - you will get a list of your results. It is that
+        simple.<br><br>
+        The usage of our website is free and does not require any software or registration.<br><br>
+        By using our website you accept our <a class="terms" href="#">Terms of Use</a>.
+        Have fun and enjoy the use of our website.
+        </p>
+    {% elif (results) != {} %}
+    <ul>
+        {% for key, value in results.items() %}
+        <li><a href="{{ value }}"}>{{ key }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+        
+</div>
+
+</body>
+</html>
